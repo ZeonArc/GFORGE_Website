@@ -1,0 +1,389 @@
+
+
+/* Global Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+.new-amsterdam-regular {
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  margin-top:10px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/src/assets/Black and Blue Cyberpunk Sky Night Gaming Desktop Background.png");
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 20px;
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.blurred-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 99%;
+  height: 98%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px); /* Strong blur effect */
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure no overflow outside the container */
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100%; /* Ensure full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack items vertically */
+}
+
+.logo-wrapper {
+  position: relative; /* For positioning text over the logo */
+  width: 300px; /* Increased size */
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.beating-logo {
+  width: 100%;
+  height: 100%;
+  animation: heartbeat 4.5s infinite;
+  filter: blur(3.5px); /* Blur effect for logo */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 60%; /* Adjust this value to position text correctly */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  max-width: 90%; /* Adjust width to fit well */
+  padding: 0 1rem;
+  text-align: center; /* Center text */
+  z-index: 10; /* Ensure text is above the logo */
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  margin: 0;
+  animation: fadeInDown 1s ease-in-out;
+  text-shadow: 0 0 15px rgba(231, 210, 245, 1.9), 0 0 30px rgba(231, 210, 245, 1.8); /* Enhanced Glow Effect */
+  white-space: nowrap; /* Ensure title stays in a single line */
+  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+}
+
+.hero-subtitle {
+  font-size: 1.8rem; /* Increased size */
+  margin: 1rem 0 2rem;
+  animation: fadeIn 1.5s ease-in-out;
+  text-shadow: 0 0 15px rgba(231, 210, 245 , 0.8), 0 0 30px rgba(231, 210, 245 , 0.8); /* Enhanced Glow Effect */
+}
+
+.hero-btn {
+  padding: 1rem 2rem;
+  background-color: #f7c650;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #1f1f1f;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-btn:hover {
+  background-color: #e0a43c;
+  transform: translateY(-3px);
+}
+
+/* Heartbeat Animation for Logo */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Background Animation */
+.home {
+  background: linear-gradient(120deg, rgba(20, 30, 48, 1) 0%, rgba(36, 59, 85, 1) 100%);
+  animation: bgAnimation 10s ease infinite;
+  background-size: 300% 300%;
+}
+
+/* Background Animation Keyframes */
+@keyframes bgAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  .logo-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* About Section */
+.about {
+  padding: 5rem 2rem;
+  background: linear-gradient(120deg, rgba(36, 59, 85, 1) 0%, rgba(20, 30, 48, 1) 100%);
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.about-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.logo-wrapper {
+  margin-bottom: 2rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.club-logo {
+  width: 150px;
+  height: auto;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+  transition: transform 0.3s ease-in-out;
+}
+
+.club-logo:hover {
+  transform: scale(1.1);
+}
+
+.about-btn {
+  padding: 1rem 2.5rem;
+  background-color: #f7c650;
+  color: #1f1f1f;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  animation: fadeInUp 1.4s ease-in-out;
+}
+
+.about-btn:hover {
+  background-color: #e0a43c;
+  transform: translateY(-3px);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .club-logo {
+    width: 120px;
+  }
+}
+
+/* Upcoming Events Section */
+.events {
+  padding: 4rem 2rem;
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  animation: fadeIn 2.5s ease;
+}
+
+.events h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.events-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.event-item {
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 2s ease;
+}
+
+/* Projects Section */
+.projects {
+  padding: 4rem 2rem;
+  background-color: #f7f7f7;
+  color: #333;
+  text-align: center;
+  animation: fadeIn 3s ease;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.project-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-item {
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
